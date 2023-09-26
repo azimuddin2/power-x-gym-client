@@ -7,7 +7,7 @@ const CustomLink = ({ children, to, ...props }) => {
 
     return (
         <Link
-            className='block py-2 pl-3 pr-4 text-secondary lg:text-neutral rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 lg:hover:text-primary md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'
+            className='block py-2 pl-3 pr-4 text-secondary lg:text-neutral rounded  hover:bg-gray-200 md:hover:bg-transparent md:border-0 lg:hover:text-primary md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'
             style={{
                 color: match ? '#fcd842' : '',
                 fontWeight: match ? '600' : '500',

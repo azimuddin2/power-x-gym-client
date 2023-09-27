@@ -16,6 +16,7 @@ const GymInformation = () => {
             icon: progressionIcon,
             title: 'Progression',
             description: 'A gym is a large room, where people go to do physical exercise and get fit.',
+            color: 'text-neutral',
         },
         {
             id: 2,
@@ -23,6 +24,7 @@ const GymInformation = () => {
             icon: workoutIcon,
             title: 'Workout',
             description: 'A gym is a large room, where people go to do physical exercise and get fit.',
+            color: 'text-primary',
         },
         {
             id: 3,
@@ -30,11 +32,12 @@ const GymInformation = () => {
             icon: nutritionIcon,
             title: 'Nutrition',
             description: 'A gym is a large room, where people go to do physical exercise and get fit.',
+            color: 'text-neutral',
         },
     ];
 
     return (
-        <section className='max-w-screen-lg mx-auto my-20'>
+        <section className='max-w-screen-lg lg:mx-auto mx-5 my-10 lg:my-20'>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3'>
                 {
                     information.map(info => <InfoCard

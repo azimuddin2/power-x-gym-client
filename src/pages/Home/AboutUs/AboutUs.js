@@ -1,13 +1,24 @@
 import React from 'react';
 import aboutUsImg from '../../../assets/Images/about-us.jpg';
 import { Link } from 'react-router-dom';
+import { BsPlayCircleFill } from 'react-icons/bs';
 
 const AboutUs = () => {
     return (
         <section className='max-w-screen-lg lg:mx-auto mx-5 my-10 lg:my-20'>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-20'>
-                <div>
-                    <img src={aboutUsImg} alt="aboutUs" />
+                <div
+                    style={{
+                        backgroundImage: `url(${aboutUsImg})`,
+                        backgroundSize: 'cover',
+                    }}
+                    className=' bg-gray-600 bg-blend-multiply'
+                >
+                    <div className='py-52 lg:py-64 flex justify-center items-center'>
+                        <BsPlayCircleFill
+                            className=' mx-auto animate-pulse text-5xl text-center text-primary bg-neutral rounded-full'
+                        ></BsPlayCircleFill>
+                    </div>
                 </div>
                 <div className='lg:mt-20'>
                     <h1 style={{ color: '#f4f4f5' }} className='text-4xl uppercase font-family font-medium'>About Us</h1>

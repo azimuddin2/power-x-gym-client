@@ -4,12 +4,13 @@ import { FiPhoneCall } from 'react-icons/fi';
 import { MdOutlineMarkEmailUnread } from 'react-icons/md';
 import { HiOutlineLocationMarker } from 'react-icons/hi';
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import ScrollToTop from 'react-scroll-to-top';
 
 const Footer = () => {
     return (
         <footer class="bg-secondary text-white">
-            <div class="mx-auto w-full max-w-screen-lg px-5 lg:px-0 py-12">
-                <div class="md:flex md:justify-between">
+            <div class="mx-auto w-full max-w-screen-lg px-5 lg:px-0 pt-16">
+                <div class="grid grid-cols-1 lg:grid-cols-2 mb-8">
 
                     <div class="mb-6 md:mb-0">
                         <Link to="/">
@@ -42,46 +43,46 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         <div>
                             <h2 class="mb-6 text-sm font-semibold text-neutral uppercase">Resources</h2>
-                            <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                                <li class="mb-4">
-                                    <a href="https://flowbite.com/" class="hover:underline">Flowbite</a>
+                            <ul class="text-gray-300 font-normal text-sm">
+                                <li class="mb-2">
+                                    <a href="/" class="hover:underline">Help Center</a>
                                 </li>
-                                <li>
-                                    <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
+                                <li class="mb-2">
+                                    <a href="/" class="hover:underline">Email Support</a>
                                 </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h2 class="mb-6 text-sm font-semibold uppercase text-white">Follow us</h2>
-                            <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                                <li class="mb-4">
-                                    <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
+                                <li class="mb-2">
+                                    <a href="/" class="hover:underline">Live Chat</a>
                                 </li>
-                                <li>
-                                    <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
+                                <li class="mb-2">
+                                    <a href="/" class="hover:underline">Gift Certificates</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="/" class="hover:underline">Send Us Feedback</a>
                                 </li>
                             </ul>
                         </div>
                         <div>
-                            <h2 class="mb-6 text-sm font-semibold uppercase text-white">Legal</h2>
-                            <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                                <li class="mb-4">
-                                    <a href="/" class="hover:underline">Privacy Policy</a>
-                                </li>
-                                <li>
-                                    <a href="/" class="hover:underline">Terms &amp; Conditions</a>
-                                </li>
-                            </ul>
+                            <h2 class="mb-6 text-sm font-semibold uppercase text-white">Join Our Newsletter</h2>
+                            <p className='text-sm text-gray-300'>A gym is a large room, where people go to do physical exercise and get fit. The gym has exercise bikes running.</p>
                         </div>
                     </div>
 
                 </div>
-                <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-                <span class="p-0">Copy right</span>
+                <hr class="border-gray-800 sm:mx-auto" />
+                <span class="flex justify-center py-5 text-sm">© Power x-gym - 2024</span>
             </div>
+            <ScrollToTop
+                smooth
+                className="animate-bounce flex justify-center items-center"
+                color="#171426"
+                width="18"
+                height="18"
+                top="400"
+                style={{ background: "#fcd842", boxShadow: 'none', borderRadius: "5px" }}
+            />
         </footer>
     );
 };

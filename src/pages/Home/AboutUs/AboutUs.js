@@ -6,7 +6,7 @@ import VideoModal from './VideoModal';
 const AboutUs = () => {
 
     return (
-        <section className='max-w-screen-lg lg:mx-auto mx-5 my-10 lg:my-20'>
+        <section className='max-w-screen-lg lg:mx-auto mx-5 my-12 lg:my-20'>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-20'>
                 <div
                     style={{

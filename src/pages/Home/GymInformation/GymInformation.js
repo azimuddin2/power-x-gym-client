@@ -37,7 +37,7 @@ const GymInformation = () => {
     ];
 
     return (
-        <section className='max-w-screen-lg lg:mx-auto mx-5 my-10 lg:my-20'>
+        <section className='max-w-screen-lg lg:mx-auto mx-5 my-12 lg:my-20'>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3'>
                 {
                     information.map(info => <InfoCard

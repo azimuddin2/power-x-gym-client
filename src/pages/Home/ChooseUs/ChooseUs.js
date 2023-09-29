@@ -31,7 +31,7 @@ const ChooseUs = () => {
     ];
 
     return (
-        <section className='max-w-screen-lg lg:mx-auto mx-5 mb-20'>
+        <section className='max-w-screen-lg lg:mx-auto mx-5'>
             <h1 className='lg:text-4xl text-3xl text-center font-family uppercase font-medium text-primary'>Why <span className='text-secondary'>Choose Us</span></h1>
             <div className='mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
                 {

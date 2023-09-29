@@ -5,8 +5,8 @@ import CustomLink from './CustomLink';
 
 const Header = () => {
     return (
-        <div className='fixed z-10 w-full'>
-            <Navbar className='lg:bg-opacity-0 max-w-screen-xl lg:mx-auto px-4 lg:px-0'>
+        <div className='fixed lg:absolute z-10 w-full'>
+            <Navbar className='lg:bg-opacity-0 max-w-screen-lg lg:mx-auto px-4 lg:px-0'>
                 <Link to="/">
                     <p className="text-secondary lg:text-neutral uppercase text-2xl font-medium font-family">
                         Power <span className='text-primary ml-1'>x-gym</span>

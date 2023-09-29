@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import aboutUsImg from '../../../assets/Images/about-us.jpg';
 import { Link } from 'react-router-dom';
-import { BsPlayCircleFill } from 'react-icons/bs';
 import VideoModal from './VideoModal';
 
 const AboutUs = () => {
@@ -14,13 +13,9 @@ const AboutUs = () => {
                         backgroundImage: `url(${aboutUsImg})`,
                         backgroundSize: 'cover',
                     }}
-                    className=' bg-gray-600 bg-blend-multiply'
-                >
-                    <div
-                        className='py-52 lg:py-64 flex justify-center items-center'
-                    >
+                    className=' bg-gray-600 bg-blend-multiply'>
+                    <div className='py-52 lg:py-64 flex justify-center items-center'>
                         <VideoModal></VideoModal>
-                        
                     </div>
                 </div>
                 <div className='lg:mt-20'>

@@ -1,0 +1,12 @@
+.program-image{
+    height: 400px;
+    width: 100%;
+}
+
+
+/* responsive mobile device */
+@media screen and (max-width: 576px) {
+    .program-image{
+        height: 300px;
+    }
+}

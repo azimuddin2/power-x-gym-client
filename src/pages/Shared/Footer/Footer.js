@@ -11,29 +11,28 @@ const Footer = () => {
         <footer class="bg-secondary text-white">
             <div class="mx-auto w-full max-w-screen-lg px-5 lg:px-0 pt-16">
                 <div class="grid grid-cols-1 lg:grid-cols-2 mb-8">
-
                     <div class="mb-6 md:mb-0">
                         <Link to="/">
-                            <p className="text-secondary lg:text-neutral uppercase text-2xl font-medium font-family">
+                            <p className="text-neutral uppercase text-2xl font-medium font-family">
                                 Power <span className='text-primary ml-1'>x-gym</span>
                             </p>
                         </Link>
                         <div className='my-6'>
-                            <p className='flex items-center mb-2'>
+                            <p className='flex items-center mb-2 text-gray-200'>
                                 <FiPhoneCall className='text-lg'></FiPhoneCall>
                                 <span className='text-sm ml-2'>+880 18830 61967</span>
                             </p>
-                            <p className='flex items-center mb-2'>
+                            <p className='flex items-center mb-2 text-gray-200'>
                                 <MdOutlineMarkEmailUnread className='text-lg'></MdOutlineMarkEmailUnread>
                                 <span className='text-sm ml-2'>mohammadazimuddin274@gmail.com</span>
                             </p>
-                            <p className='flex items-center'>
+                            <p className='flex items-center text-gray-200'>
                                 <HiOutlineLocationMarker className='text-lg'></HiOutlineLocationMarker>
                                 <span className='text-sm ml-2'>Level-4, 34, Awal Centre, Banani, Dhaka</span>
                             </p>
                         </div>
                         <div>
-                            <h3 className='text-lg font-family uppercase'>Follow Us</h3>
+                            <h3 className='text-lg font-family uppercase text-gray-200'>Follow Us</h3>
                             <div className='flex items-center mt-3'>
                                 <FaFacebook className='text-2xl mr-3'></FaFacebook>
                                 <FaInstagram className='text-2xl mr-3'></FaInstagram>
@@ -42,7 +41,6 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         <div>
                             <h2 class="mb-6 text-sm font-semibold text-neutral uppercase">Resources</h2>
@@ -69,10 +67,9 @@ const Footer = () => {
                             <p className='text-sm text-gray-300'>A gym is a large room, where people go to do physical exercise and get fit. The gym has exercise bikes running.</p>
                         </div>
                     </div>
-
                 </div>
                 <hr class="border-gray-800 sm:mx-auto" />
-                <span class="flex justify-center py-5 text-sm">© Power x-gym - 2024</span>
+                <span class="flex justify-center py-5 text-sm text-gray-200">© Power x-gym - 2024</span>
             </div>
             <ScrollToTop
                 smooth

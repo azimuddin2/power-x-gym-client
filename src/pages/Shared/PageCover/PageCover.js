@@ -9,7 +9,7 @@ const PageCover = ({ title }) => {
                 backgroundSize: 'cover',
             }}
             className="w-full bg-gray-700 bg-blend-multiply">
-            <div className="px-5 mx-auto max-w-screen-xl text-center py-28 lg:py-48">
+            <div className="px-5 mx-auto max-w-screen-xl text-center pb-12 py-28 lg:py-48">
                 <h1 className="font-family mb-4 text-4xl leading-10 font-normal uppercase tracking-tight lg:leading-none text-white md:text-5xl lg:text-5xl">{title}</h1>
             </div>
         </section>

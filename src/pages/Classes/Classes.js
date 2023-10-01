@@ -1,47 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PageCover from '../Shared/PageCover/PageCover';
-import psychoTraining from '../../assets/Images/psycho-training.png';
-import selfDefense from '../../assets/Images/self-defense.png';
-import advanceGym from '../../assets/Images/advance-gym.jpg';
-import cardioTraining from '../../assets/Images/cardio-training.png';
-import strengthTraining from '../../assets/Images/strength-training.jpg';
-import crunchFitness from '../../assets/Images/crunch-fitness.png';
 import ClassCard from './ClassCard';
 
 const Classes = () => {
+    const [classes, setClasses] = useState([]);
 
-    const classes = [
-        {
-            id: 1,
-            image: selfDefense,
-            name: 'Self defense',
-        },
-        {
-            id: 2,
-            image: cardioTraining,
-            name: 'Cardio training',
-        },
-        {
-            id: 3,
-            image: advanceGym,
-            name: 'Advance gym',
-        },
-        {
-            id: 4,
-            image: psychoTraining,
-            name: 'Psycho training',
-        },
-        {
-            id: 5,
-            image: strengthTraining,
-            name: 'Strength training',
-        },
-        {
-            id: 6,
-            image: crunchFitness,
-            name: 'Crunch Fitness',
-        },
-    ];
+    useEffect(() => {
+        fetch('classes.json')
+            .then(res => res.json())
+            .then(data => setClasses(data));
+    }, [])
 
     return (
         <section>

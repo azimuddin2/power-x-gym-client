@@ -3,24 +3,23 @@ import PageCover from '../Shared/PageCover/PageCover';
 import psychoTraining from '../../assets/Images/psycho-training.png';
 import selfDefense from '../../assets/Images/self-defense.png';
 import advanceGym from '../../assets/Images/advance-gym.jpg';
-import cardioTraining from '../../assets/Images/cardio-training.jpg';
+import cardioTraining from '../../assets/Images/cardio-training.png';
 import strengthTraining from '../../assets/Images/strength-training.jpg';
-import Class from './ClassCard';
+import crunchFitness from '../../assets/Images/crunch-fitness.png';
 import ClassCard from './ClassCard';
-// import psychoTraining from '../../assets/Images/psycho-training.png';
 
 const Classes = () => {
 
     const classes = [
         {
             id: 1,
-            image: psychoTraining,
-            name: 'Psycho training',
+            image: selfDefense,
+            name: 'Self defense',
         },
         {
             id: 2,
-            image: selfDefense,
-            name: 'Self defense',
+            image: cardioTraining,
+            name: 'Cardio training',
         },
         {
             id: 3,
@@ -29,13 +28,18 @@ const Classes = () => {
         },
         {
             id: 4,
-            image: cardioTraining,
-            name: 'Cardio training',
+            image: psychoTraining,
+            name: 'Psycho training',
         },
         {
             id: 5,
             image: strengthTraining,
             name: 'Strength training',
+        },
+        {
+            id: 6,
+            image: crunchFitness,
+            name: 'Crunch Fitness',
         },
     ];
 

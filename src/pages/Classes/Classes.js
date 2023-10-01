@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import PageCover from '../Shared/PageCover/PageCover';
 import ClassCard from './ClassCard';
+import useTitle from '../../hooks/useTitle';
 
 const Classes = () => {
+    useTitle('Our Classes');
     const [classes, setClasses] = useState([]);
 
     useEffect(() => {

@@ -11,7 +11,7 @@ const Programs = () => {
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 mt-10'>
                 <div className='relative'>
                     <img src={femaleTrainingImg} alt="" className='program-image' />
-                    <Link to='/'
+                    <Link to='/classes'
                         className="absolute bottom-8 lg:bottom-12 bg-primary text-secondary mt-8 font-semibold uppercase inline-flex justify-center items-center py-4 px-12 text-lg text-center rounded-none hover:bg-yellow-200 font-family">
                         Female training session
                         <svg className="w-4 h-4 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
@@ -22,7 +22,7 @@ const Programs = () => {
 
                 <div className='relative'>
                     <img src={maleTrainingImg} alt="" className='program-image' />
-                    <Link to='/'
+                    <Link to='/classes'
                         className="absolute bottom-8 lg:bottom-12 bg-primary text-secondary mt-8 font-semibold uppercase inline-flex justify-center items-center py-4 px-12 text-lg text-center rounded-none hover:bg-yellow-200 font-family">
                         Male training session
                         <svg className="w-4 h-4 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">

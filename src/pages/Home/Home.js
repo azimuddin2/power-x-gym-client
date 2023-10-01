@@ -4,8 +4,10 @@ import GymInformation from './GymInformation/GymInformation';
 import AboutUs from './AboutUs/AboutUs';
 import ChooseUs from './ChooseUs/ChooseUs';
 import Programs from './Programs/Programs';
+import useTitle from '../../hooks/useTitle';
 
 const Home = () => {
+    useTitle('Home');
     return (
         <div>
             <Banner></Banner>

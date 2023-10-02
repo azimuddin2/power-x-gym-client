@@ -2,7 +2,7 @@ import React from 'react';
 import PageCover from '../Shared/PageCover/PageCover';
 import useTitle from '../../hooks/useTitle';
 import advanceBgImg from '../../assets/Images/progression-bg.jpg';
-import beginnerBgImg from '../../assets/Images/workout-bg.jpg';
+import beginnerBgImg from '../../assets/Images/beginner-bg.jpg';
 import basicBgImg from '../../assets/Images/nutrition-bg.jpg';
 import PriceCard from './PriceCard';
 

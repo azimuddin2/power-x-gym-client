@@ -1,58 +1,28 @@
 import React from 'react';
 import PageCover from '../Shared/PageCover/PageCover';
 import useTitle from '../../hooks/useTitle';
-import advanceBgImg from '../../assets/Images/progression-bg.jpg';
-import beginnerBgImg from '../../assets/Images/beginner-bg.jpg';
-import basicBgImg from '../../assets/Images/nutrition-bg.jpg';
 import PriceCard from './PriceCard';
+import { useQuery } from '@tanstack/react-query';
 
 const Pricing = () => {
     useTitle('Pricing');
 
-    const pricing = [
-        {
-            _id: 1,
-            bgImg: advanceBgImg,
-            title: 'Billed Monthly',
-            name: 'Advance Plan',
-            price: 140,
-            planing: [
-                'Mobile Optimized',
-                'Best Hosting',
-                'Free Custom',
-                'Outstanding',
-                'Happy Customers'
-            ]
-        },
-        {
-            _id: 2,
-            bgImg: beginnerBgImg,
-            title: 'Billed Monthly',
-            name: 'Beginner Plan',
-            price: 120,
-            planing: [
-                'Mobile Optimized',
-                'Best Hosting',
-                'Free Custom',
-                'Outstanding',
-                'Happy Customers'
-            ]
-        },
-        {
-            _id: 3,
-            bgImg: basicBgImg,
-            title: 'Billed Monthly',
-            name: 'Basic Plan',
-            price: 100,
-            planing: [
-                'Mobile Optimized',
-                'Best Hosting',
-                'Free Custom',
-                'Outstanding',
-                'Happy Customers'
-            ]
-        },
-    ];
+    const { isLoading, error, data: pricing } = useQuery({
+        queryKey: ['pricing'],
+        queryFn: async () => {
+            const res = await fetch('http://localhost:5000/pricing');
+            const data = await res.json();
+            return data;
+        }
+    });
+
+    if (isLoading) {
+        return <p>Loading...</p>
+    }
+
+    if (error) {
+        return <p>Error: </p>
+    }
 
     return (
         <section>

@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 import { BsCheck2Circle } from 'react-icons/bs';
 
 const PriceCard = ({ priceInfo }) => {
-    const { bgImg, title, name, price, planing } = priceInfo;
+    const { image, title, name, price, planing } = priceInfo;
 
     return (
         <div className="w-full h-full bg-gray-600 bg-blend-multiply py-12"
             style={{
-                backgroundImage: `url(${bgImg})`,
+                backgroundImage: `url(${image})`,
                 backgroundSize: '100%',
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: '100%',

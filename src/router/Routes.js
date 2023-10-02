@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
 import Home from "../pages/Home/Home";
 import Classes from "../pages/Classes/Classes";
+import Pricing from "../pages/Pricing/Pricing";
 
 const router = createBrowserRouter([
     {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
                 path: 'classes',
                 element: <Classes></Classes>
             },
+            {
+                path: 'pricing',
+                element: <Pricing></Pricing>
+            }
         ]
     },
 ]);

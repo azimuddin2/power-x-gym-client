@@ -1,10 +1,10 @@
 import React from 'react';
-import PageCover from '../Shared/PageCover/PageCover';
-import ClassCard from './ClassCard';
-import useTitle from '../../hooks/useTitle';
+import PageCover from '../../Shared/PageCover/PageCover';
+import useTitle from '../../../hooks/useTitle';
 import { useQuery } from '@tanstack/react-query';
-import Loading from '../../components/Loading/Loading';
-import Error from '../../components/Error/Error';
+import Loading from '../../../components/Loading/Loading';
+import Error from '../../../components/Error/Error';
+import ClassCard from './ClassCard';
 
 const Classes = () => {
     useTitle('Our Classes');

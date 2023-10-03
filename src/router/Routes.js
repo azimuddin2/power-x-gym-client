@@ -4,6 +4,7 @@ import Home from "../pages/Home/Home";
 import Pricing from "../pages/Pricing/Pricing";
 import Classes from "../pages/Classes/Classes/Classes";
 import ClassesDetails from "../pages/Classes/ClassesDetails/ClassesDetails";
+import Purchase from "../pages/Purchase/Purchase";
 
 const router = createBrowserRouter([
     {
@@ -28,8 +29,15 @@ const router = createBrowserRouter([
             {
                 path: 'pricing',
                 element: <Pricing></Pricing>
-            }
-        ]
+            },
+            {
+                path: '/purchase/:id',
+                element: <Purchase></Purchase>,
+                loader: ({ params }) => {
+                    return fetch(`http://localhost:5000/purchase/${params.id}`)
+                }
+            },
+        ],
     },
 ]);
 

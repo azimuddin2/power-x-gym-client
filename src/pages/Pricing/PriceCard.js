@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { BsCheck2Circle } from 'react-icons/bs';
 
 const PriceCard = ({ priceInfo }) => {
-    const { image, title, name, price, planing } = priceInfo;
+    const { _id, image, title, name, price, planing } = priceInfo;
 
     return (
         <div className="w-full h-full bg-gray-600 bg-blend-multiply py-12"
@@ -29,7 +29,7 @@ const PriceCard = ({ priceInfo }) => {
                 }
             </ul>
             <div className='w-1/2 mx-auto'>
-                <Link to='/classes'
+                <Link to={`/purchase/${_id}`}
                     className="bg-primary text-secondary mt-8 font-semibold uppercase inline-flex justify-center items-center py-2 px-8 text-base text-center rounded-sm hover:bg-yellow-200 font-family">
                     Purchase
                     <svg className="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">

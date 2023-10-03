@@ -3,6 +3,8 @@ import PageCover from '../Shared/PageCover/PageCover';
 import useTitle from '../../hooks/useTitle';
 import PriceCard from './PriceCard';
 import { useQuery } from '@tanstack/react-query';
+import Loading from '../../components/Loading/Loading';
+import Error from '../../components/Error/Error';
 
 const Pricing = () => {
     useTitle('Pricing');
@@ -17,11 +19,11 @@ const Pricing = () => {
     });
 
     if (isLoading) {
-        return <p>Loading...</p>
+        return <Loading></Loading>
     }
 
     if (error) {
-        return <p>Error: </p>
+        return <Error error={error.message}></Error>
     }
 
     return (

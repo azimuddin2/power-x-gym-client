@@ -3,6 +3,8 @@ import PageCover from '../Shared/PageCover/PageCover';
 import ClassCard from './ClassCard';
 import useTitle from '../../hooks/useTitle';
 import { useQuery } from '@tanstack/react-query';
+import Loading from '../../components/Loading/Loading';
+import Error from '../../components/Error/Error';
 
 const Classes = () => {
     useTitle('Our Classes');
@@ -17,11 +19,11 @@ const Classes = () => {
     });
 
     if (isLoading) {
-        return <p>Loading...</p>
+        return <Loading></Loading>
     }
 
     if (error) {
-        return <p>Error: </p>
+        return <Error error={error.message}></Error>
     }
 
     return (

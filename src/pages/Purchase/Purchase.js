@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import PageCover from '../Shared/PageCover/PageCover';
-import { Button, Step, Stepper, Typography } from '@material-tailwind/react';
+import { Button, Step, Stepper } from '@material-tailwind/react';
+import './Purchase.css';
 
 const Purchase = () => {
     const purchase = useLoaderData();
@@ -17,22 +18,28 @@ const Purchase = () => {
         <section>
             <PageCover title={purchase.name}></PageCover>
             <div className='max-w-screen-lg lg:mx-auto mx-5 my-12 lg:my-20'>
-                <div className="w-full py-4 px-8">
-                    <Stepper
-                        activeStep={activeStep}
-                        isLastStep={(value) => setIsLastStep(value)}
-                        isFirstStep={(value) => setIsFirstStep(value)}
-                    >
-                        <Step onClick={() => setActiveStep(0)}>
-                            <span className='flex justify-center items-center'>1</span>
-                        </Step>
-                        <Step onClick={() => setActiveStep(1)}>
-                            <span className='flex justify-center items-center'>2</span>
-                        </Step>
-                        <Step onClick={() => setActiveStep(2)}>
-                            <span className='flex justify-center items-center'>3</span>
-                        </Step>
-                    </Stepper>
+                <div className="w-full">
+
+                    <div className=' w-1/2 mx-auto'>
+                        <Stepper
+                            activeStep={activeStep}
+                            isLastStep={(value) => setIsLastStep(value)}
+                            isFirstStep={(value) => setIsFirstStep(value)}
+                        >
+                            <Step onClick={() => setActiveStep(0)}>
+                                <span className='flex justify-center items-center'>1</span>
+                            </Step>
+
+                            <Step onClick={() => setActiveStep(1)}>
+                                <span className='flex justify-center items-center'>2</span>
+                            </Step>
+
+                            <Step onClick={() => setActiveStep(2)}>
+                                <span className='flex justify-center items-center'>3</span>
+                            </Step>
+
+                        </Stepper>
+                    </div>
 
                     <div className="mt-20 flex justify-between">
                         <Button
@@ -50,7 +57,6 @@ const Purchase = () => {
                             Next
                         </Button>
                     </div>
-
                 </div>
             </div>
         </section>

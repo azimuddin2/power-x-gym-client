@@ -6,7 +6,7 @@ const PriceCard = ({ priceInfo }) => {
     const { _id, image, title, name, price, planing } = priceInfo;
 
     return (
-        <div className="w-full h-full bg-gray-600 bg-blend-multiply py-12"
+        <div className="w-full h-full bg-gray-600 bg-blend-multiply py-9"
             style={{
                 backgroundImage: `url(${image})`,
                 backgroundSize: '100%',

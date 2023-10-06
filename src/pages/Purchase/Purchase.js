@@ -55,7 +55,7 @@ const Purchase = () => {
                                 <div className="absolute -bottom-10 w-max text-center">
                                     <Typography
                                         variant="h6"
-                                        color={activeStep === 0 ? "green" : "black"}
+                                        color={activeStep === 0 ? "black" : "gray"}
                                     >
                                         Personal Details
                                     </Typography>
@@ -67,7 +67,7 @@ const Purchase = () => {
                                 <div className="absolute -bottom-10 w-max text-center">
                                     <Typography
                                         variant="h6"
-                                        color={activeStep === 1 ? "green" : "black"}
+                                        color={activeStep === 1 ? "black" : "gray"}
                                     >
                                         Bank Payment
                                     </Typography>
@@ -79,7 +79,7 @@ const Purchase = () => {
                                 <div className="absolute -bottom-10 w-max text-center">
                                     <Typography
                                         variant="h6"
-                                        color={activeStep === 2 ? "green" : "black"}
+                                        color={activeStep === 2 ? "black" : "gray"}
                                     >
                                         Membership Created
                                     </Typography>

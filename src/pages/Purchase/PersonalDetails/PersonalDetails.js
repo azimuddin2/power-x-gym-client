@@ -14,11 +14,39 @@ const PersonalDetails = () => {
             .then(data => setCountries(data));
     }, []);
 
-    console.log(countries);
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const form = event.target;
+        const firstName = form.firstName.value;
+        const lastName = form.lastName.value;
+        const email = form.email.value;
+        const phone = form.phone.value;
+        const date = form.date.value;
+        const gender = form.gender.value;
+        const address = form.address.value;
+        const country = form.country.value;
+        const city = form.city.value;
+        const postcode = form.postcode.value;
+
+        const personalInfo = {
+            firstName,
+            lastName,
+            email,
+            phone,
+            date,
+            gender,
+            address,
+            country,
+            city,
+            postcode
+        };
+        console.log(personalInfo)
+        form.reset();
+    };
 
     return (
         <div className='my-20'>
-            <form>
+            <form onSubmit={handleSubmit} className='shadow-lg p-10'>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-5'>
                     <div>
                         <label htmlFor="first_name" className="block ml-1 mb-2 text-sm font-medium ">First Name</label>
@@ -29,7 +57,6 @@ const PersonalDetails = () => {
                             required
                         />
                     </div>
-
                     <div>
                         <label htmlFor="last_name" className="block ml-1 mb-2 text-sm font-medium ">Last Name</label>
                         <input
@@ -39,7 +66,6 @@ const PersonalDetails = () => {
                             required
                         />
                     </div>
-
                     <div>
                         <label htmlFor="email" className="block ml-1 mb-2 text-sm font-medium ">Email</label>
                         <input
@@ -49,7 +75,6 @@ const PersonalDetails = () => {
                             required
                         />
                     </div>
-
                     <div>
                         <label htmlFor="mobile_number" className="block ml-1 mb-2 text-sm font-medium ">Mobile Number</label>
                         <input
@@ -59,7 +84,6 @@ const PersonalDetails = () => {
                             required
                         />
                     </div>
-
                     <div className='relative'>
                         <label htmlFor="date_birth" className="block ml-1 mb-2 text-sm font-medium ">Date of Birth</label>
                         <ReactDatePicker
@@ -72,7 +96,6 @@ const PersonalDetails = () => {
                         ></ReactDatePicker>
                         <MdOutlineDateRange className='text-xl mr-2 absolute right-2 top-10'></MdOutlineDateRange>
                     </div>
-
                     <div>
                         <label htmlFor="gender" className="block ml-1 mb-2 text-sm font-medium ">Gender</label>
                         <select
@@ -83,7 +106,6 @@ const PersonalDetails = () => {
                             <option value="female">Female</option>
                         </select>
                     </div>
-
                     <div>
                         <label htmlFor="address" className="block ml-1 mb-2 text-sm font-medium ">Address</label>
                         <input
@@ -93,7 +115,6 @@ const PersonalDetails = () => {
                             required
                         />
                     </div>
-
                     <div>
                         <label htmlFor="country" className="block ml-1 mb-2 text-sm font-medium ">Country/Region</label>
                         <select
@@ -108,7 +129,6 @@ const PersonalDetails = () => {
                             }
                         </select>
                     </div>
-
                     <div>
                         <label htmlFor="city" className="block ml-1 mb-2 text-sm font-medium ">City</label>
                         <input
@@ -118,7 +138,6 @@ const PersonalDetails = () => {
                             required
                         />
                     </div>
-
                     <div>
                         <label htmlFor="postcode" className="block ml-1 mb-2 text-sm font-medium ">Postcode</label>
                         <input
@@ -129,11 +148,13 @@ const PersonalDetails = () => {
                         />
                     </div>
                 </div>
-                <input
-                    className="bg-primary text-secondary mt-8 font-semibold uppercase inline-flex justify-center items-center py-3 text-base text-center rounded-sm hover:bg-secondary hover:text-neutral font-family w-full cursor-pointer"
-                    type="submit"
-                    value="Submit"
-                />
+                <div className=' flex justify-end mt-10'>
+                    <input
+                        className="w-1/2 font-semibold uppercase inline-flex justify-center items-center py-3 text-base text-center rounded-sm bg-secondary text-neutral cursor-pointer"
+                        type="submit"
+                        value="Submit"
+                    />
+                </div>
             </form >
         </div >
     );

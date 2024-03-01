@@ -46,7 +46,7 @@ const PersonalDetails = () => {
 
     return (
         <div className='my-20'>
-            <form onSubmit={handleSubmit} className='shadow-lg p-10'>
+            <form onSubmit={handleSubmit} className='border lg:p-12'>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-5'>
                     <div>
                         <label htmlFor="first_name" className="block ml-1 mb-2 text-sm font-medium ">First Name</label>

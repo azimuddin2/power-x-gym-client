@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import CustomLink from './CustomLink';
 import { AuthContext } from '../../../providers/AuthProvider';
 import { toast } from 'react-toastify';
-import { button } from '@material-tailwind/react';
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -35,7 +34,12 @@ const Header = () => {
                         {
                             user?.uid ?
                                 (
-                                    <button onClick={handleLogOut} className='lg:text-white'>SignOut</button>
+                                    <button
+                                        onClick={handleLogOut}
+                                        className='w-full text-left py-2 pl-3 pr-4 text-secondary lg:text-neutral rounded  hover:bg-gray-200 md:hover:bg-transparent md:border-0 lg:hover:text-primary md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'
+                                    >
+                                        SignOut
+                                    </button>
                                 )
                                 :
                                 (

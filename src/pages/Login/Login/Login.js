@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useTitle from '../../../hooks/useTitle';
 import './Login.css';
 import { AuthContext } from '../../../providers/AuthProvider';
@@ -8,6 +8,10 @@ import { toast } from 'react-toastify';
 const Login = () => {
     useTitle('Login');
     const { signIn } = useContext(AuthContext);
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -19,6 +23,9 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                form.reset();
+                toast.success('User login successfully.');
+                navigate(from, { replace: true });
             })
             .catch((error) => {
                 toast.error(error.message);
@@ -26,7 +33,7 @@ const Login = () => {
     };
 
     return (
-        <section className='my-28'>
+        <section className='my-36'>
             <Link to="/">
                 <p className="mb-6 text-secondary uppercase text-2xl font-medium text-center font-family">
                     Power <span className='text-primary ml-1'>x-gym</span>
@@ -39,7 +46,7 @@ const Login = () => {
                         <input
                             type="email"
                             name="email"
-                            placeholder='Enter Your Email'
+                            placeholder='Enter your email'
                             className="border border-gray-300 text-gray-900 rounded-sm w-full p-2 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary "
                             required
                         />

@@ -5,6 +5,8 @@ import Pricing from "../pages/Pricing/Pricing";
 import Classes from "../pages/Classes/Classes/Classes";
 import ClassesDetails from "../pages/Classes/ClassesDetails/ClassesDetails";
 import Purchase from "../pages/Purchase/Purchase";
+import Login from "../pages/Login/Login/Login";
+import SignUp from "../pages/Login/SignUp/SignUp";
 
 const router = createBrowserRouter([
     {
@@ -38,6 +40,14 @@ const router = createBrowserRouter([
                 }
             },
         ],
+    },
+    {
+        path: '/login',
+        element: <Login></Login>
+    },
+    {
+        path: '/signup',
+        element: <SignUp></SignUp>
     },
 ]);
 

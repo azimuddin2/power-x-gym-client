@@ -44,10 +44,10 @@ const BankPayment = () => {
                     </div>
                     <div className="grid lg:grid-cols-2 gap-5 my-5">
                         <div>
-                            <label htmlFor="email" className="block ml-1 mb-2 text-sm">Name on Card</label>
+                            <label htmlFor="cardName" className="block ml-1 mb-2 text-sm">Name on Card</label>
                             <input
-                                type="email"
-                                name="email"
+                                type="text"
+                                name="cardName"
                                 placeholder='Enter type here'
                                 className="border border-gray-300 text-gray-900 rounded-sm w-full p-2 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary "
                                 required
@@ -55,10 +55,10 @@ const BankPayment = () => {
                         </div>
                         <div className='grid grid-cols-2 gap-5'>
                             <div>
-                                <label htmlFor="email" className="block ml-1 mb-2 text-sm">Expiry Date</label>
+                                <label htmlFor="expiryDate" className="block ml-1 mb-2 text-sm">Expiry Date</label>
                                 <input
-                                    type="email"
-                                    name="email"
+                                    type="text"
+                                    name="expiryDate"
                                     placeholder='MM / YY'
                                     className="border border-gray-300 text-gray-900 rounded-sm w-full p-2 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary "
                                     required

@@ -28,7 +28,7 @@ const router = createBrowserRouter([
                 path: '/classes/:id',
                 element: <ClassesDetails></ClassesDetails>,
                 loader: ({ params }) => {
-                    return fetch(`http://localhost:5000/classes/${params.id}`)
+                    return fetch(`https://power-x-gym-server.vercel.app/classes/${params.id}`)
                 }
             },
             {
@@ -39,7 +39,7 @@ const router = createBrowserRouter([
                 path: '/purchase/:id',
                 element: <PrivateRoute><Purchase></Purchase></PrivateRoute>,
                 loader: ({ params }) => {
-                    return fetch(`http://localhost:5000/purchase/${params.id}`)
+                    return fetch(`https://power-x-gym-server.vercel.app/purchase/${params.id}`)
                 }
             },
         ],

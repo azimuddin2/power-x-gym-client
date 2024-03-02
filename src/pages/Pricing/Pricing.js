@@ -12,7 +12,7 @@ const Pricing = () => {
     const { isLoading, error, data: pricing } = useQuery({
         queryKey: ['pricing'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/pricing');
+            const res = await fetch('https://power-x-gym-server.vercel.app/pricing');
             const data = await res.json();
             return data;
         }

@@ -9,7 +9,7 @@ import ClassCard from './ClassCard';
 const Classes = () => {
     useTitle('Our Classes');
 
-    const { isLoading, error, data: classes } = useQuery({
+    const { isLoading, error, data: classes = [] } = useQuery({
         queryKey: ['classes'],
         queryFn: async () => {
             const res = await fetch('http://localhost:5000/classes');
@@ -32,8 +32,8 @@ const Classes = () => {
             <div className='max-w-screen-lg lg:mx-auto mx-5 my-12 lg:my-20'>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
                     {
-                        classes.map(classCard => <ClassCard
-                            key={classCard.id}
+                        classes?.map(classCard => <ClassCard
+                            key={classCard._id}
                             classCard={classCard}
                         ></ClassCard>)
                     }

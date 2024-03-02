@@ -32,7 +32,8 @@ const ClassesDetails = () => {
                         <h1 className='text-primary text-4xl uppercase font-medium font-family'>Class <span className='text-secondary'>Schedule</span></h1>
                         <div className='grid grid-cols-1 md:grid-cols-2 gap-3 mt-8'>
                             {
-                                classSchedule.map(schedule => <div className='p-5 shadow-lg rounded-sm'
+                                classSchedule.map((schedule, index) => <div className='p-5 shadow rounded-sm'
+                                    key={index}
                                     schedule={schedule}
                                 >
                                     <h2 className='text-secondary text-xl font-bold'>{schedule.day}</h2>
@@ -45,7 +46,7 @@ const ClassesDetails = () => {
                                 className="bg-primary text-secondary mt-8 font-semibold uppercase inline-flex justify-center items-center py-2 px-8 text-base text-center rounded-sm hover:bg-secondary hover:text-neutral font-family">
                                 Pricing
                                 <svg className="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
                                 </svg>
                             </Link>
                         </div>

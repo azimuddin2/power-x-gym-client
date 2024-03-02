@@ -16,7 +16,7 @@ const VideoModal = () => {
             <Modal dismissible show={props.openModal === 'dismissible'} onClose={() => props.setOpenModal(undefined)}>
                 <Modal.Header className='py-2 border-none'></Modal.Header>
                 <Modal.Body className='pt-0'>
-                    <video class="w-full" controls>
+                    <video className="w-full" controls>
                         <source src={gymVideo} type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>

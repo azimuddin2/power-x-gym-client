@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import ReactDatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 import { MdOutlineDateRange } from 'react-icons/md';
 import './PersonalDetails.css';
+import { AuthContext } from '../../../providers/AuthProvider';
 
 const PersonalDetails = () => {
+    const { user } = useContext(AuthContext);
     const [selectDate, setSelectDate] = useState(new Date());
     const [countries, setCountries] = useState([]);
 
@@ -46,7 +48,7 @@ const PersonalDetails = () => {
 
     return (
         <div className='my-20'>
-            <form onSubmit={handleSubmit} className='border lg:p-12'>
+            <form onSubmit={handleSubmit} className='border p-5 lg:p-12'>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-5'>
                     <div>
                         <label htmlFor="first_name" className="block ml-1 mb-2 text-sm font-medium ">First Name</label>
@@ -69,10 +71,11 @@ const PersonalDetails = () => {
                     <div>
                         <label htmlFor="email" className="block ml-1 mb-2 text-sm font-medium ">Email</label>
                         <input
+                            value={user?.email}
                             type="email"
                             name='email'
                             className="border border-gray-300 text-gray-900 rounded-sm w-full p-3 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary "
-                            required
+                            disabled
                         />
                     </div>
                     <div>
@@ -139,7 +142,7 @@ const PersonalDetails = () => {
                         />
                     </div>
                     <div>
-                        <label htmlFor="postcode" className="block ml-1 mb-2 text-sm font-medium ">Postcode</label>
+                        <label htmlFor="postcode" className="block ml-1 mb-2 text-sm font-medium ">Post Code</label>
                         <input
                             type="text"
                             name='postcode'
@@ -150,7 +153,7 @@ const PersonalDetails = () => {
                 </div>
                 <div className=' flex justify-end mt-10'>
                     <input
-                        className="w-1/2 font-semibold uppercase inline-flex justify-center items-center py-3 text-base text-center rounded-sm bg-secondary text-neutral cursor-pointer"
+                        className="text-white bg-secondary hover:bg-blue-800 focus:ring-4 font-medium rounded-md text-sm px-5 py-2.5 me-2"
                         type="submit"
                         value="Submit"
                     />

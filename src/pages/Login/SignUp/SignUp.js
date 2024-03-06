@@ -1,16 +1,40 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import useTitle from '../../../hooks/useTitle';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../providers/AuthProvider';
+import { toast } from 'react-toastify';
 
 const SignUp = () => {
     useTitle('SignUp');
+    const { createUser, updateUserProfile } = useContext(AuthContext);
 
     const handleSubmit = (event) => {
         event.preventDefault();
         const form = event.target;
         const name = form.name.value;
         const email = form.email.value;
-        const possword = form.password.value;
+        const password = form.password.value;
+
+        createUser(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                handleUpdateUserProfile(name);
+            })
+            .catch((error) => {
+                toast.error(error.message);
+            })
+    };
+
+    const handleUpdateUserProfile = (name) => {
+        const profile = {
+            displayName: name,
+        };
+        updateUserProfile(profile)
+            .then(() => { })
+            .catch(error => {
+                toast.error(error.message);
+            })
     };
 
     return (

@@ -1,16 +1,28 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import useTitle from '../../../hooks/useTitle';
 import './Login.css';
+import { AuthContext } from '../../../providers/AuthProvider';
+import { toast } from 'react-toastify';
 
 const Login = () => {
     useTitle('Login');
+    const { signIn } = useContext(AuthContext);
 
     const handleSubmit = (event) => {
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
-        const possword = form.password.value;
+        const password = form.password.value;
+
+        signIn(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
+            .catch((error) => {
+                toast.error(error.message);
+            })
     };
 
     return (

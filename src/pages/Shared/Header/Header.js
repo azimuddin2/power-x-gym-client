@@ -1,9 +1,22 @@
 import { Navbar } from 'flowbite-react';
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import CustomLink from './CustomLink';
+import { AuthContext } from '../../../providers/AuthProvider';
+import { toast } from 'react-toastify';
+import { button } from '@material-tailwind/react';
 
 const Header = () => {
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => {
+                toast.error(error.message);
+            })
+    };
+
     return (
         <div className='fixed lg:absolute z-10 w-full'>
             <Navbar className='lg:bg-opacity-0 max-w-screen-lg lg:mx-auto px-4 lg:px-0'>
@@ -18,7 +31,18 @@ const Header = () => {
                     <li><CustomLink to='/services'>Services</CustomLink></li>
                     <li><CustomLink to='/classes'>Our Classes</CustomLink></li>
                     <li><CustomLink to='/pricing'>Pricing</CustomLink></li>
-                    <li><CustomLink to='/login'>Login</CustomLink></li>
+                    <li>
+                        {
+                            user?.uid ?
+                                (
+                                    <button onClick={handleLogOut} className='lg:text-white'>SignOut</button>
+                                )
+                                :
+                                (
+                                    <CustomLink to='/login'>Login</CustomLink>
+                                )
+                        }
+                    </li>
                 </Navbar.Collapse>
             </Navbar>
         </div>

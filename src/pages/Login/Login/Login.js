@@ -21,13 +21,13 @@ const Login = () => {
                 </p>
             </Link>
             <div className='form'>
-                {/* <h1 className='text-center text-3xl font-medium mb-6'>Login</h1> */}
                 <form onSubmit={handleSubmit}>
                     <div>
                         <label htmlFor="email" className="block ml-1 mb-2 text-sm font-medium">Email</label>
                         <input
                             type="email"
                             name="email"
+                            placeholder='Enter Your Email'
                             className="border border-gray-300 text-gray-900 rounded-sm w-full p-2 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary "
                             required
                         />
@@ -37,6 +37,7 @@ const Login = () => {
                         <input
                             type="password"
                             name='password'
+                            placeholder='Password'
                             className="border border-gray-300 text-gray-900 rounded-sm w-full p-2 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary "
                             required
                         />

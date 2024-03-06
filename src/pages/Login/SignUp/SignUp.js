@@ -27,6 +27,7 @@ const SignUp = () => {
                         <input
                             type="text"
                             name="name"
+                            placeholder='Enter Your Name'
                             className="border border-gray-300 text-gray-900 rounded-sm w-full p-2 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary "
                             required
                         />
@@ -36,6 +37,7 @@ const SignUp = () => {
                         <input
                             type="email"
                             name="email"
+                            placeholder='Enter Your Email'
                             className="border border-gray-300 text-gray-900 rounded-sm w-full p-2 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary "
                             required
                         />
@@ -45,6 +47,7 @@ const SignUp = () => {
                         <input
                             type="password"
                             name='password'
+                            placeholder='Password'
                             className="border border-gray-300 text-gray-900 rounded-sm w-full p-2 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary "
                             required
                         />
